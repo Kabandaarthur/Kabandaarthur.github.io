@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,6 +115,13 @@ h1 em{font-style:normal;color:var(--accent)}
 .contact{background:linear-gradient(135deg,var(--raised),var(--surface));border:1px solid var(--line);border-radius:20px;padding:56px;text-align:center}
 .contact p{color:var(--muted);margin:0 auto 32px;max-width:48ch}
 .contact .btns{justify-content:center}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:34px 16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;color:var(--accent);transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card svg{width:32px;height:32px;margin-bottom:10px}
+.card .ico{font:700 1.9rem/32px var(--mono);margin-bottom:10px;height:32px}
+.card small{font:500 .78rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.card span{color:var(--text);font-weight:500;font-size:.95rem;word-break:break-word}
 footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
 
 @media(max-width:860px){
@@ -126,7 +132,7 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
   .proj.feat{flex-direction:column;align-items:stretch;gap:22px}
   .proj.feat .meta{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:18px;flex:none}
   nav ul{gap:16px;font-size:.88rem}
-  .contact{padding:40px 22px}
+  .cards{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:520px){nav ul li:nth-child(-n+2){display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -154,7 +160,7 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
     <div>
       <div class="status"><i></i>Open to internships and collaborations</div>
       <h1>Kabanda <em>Arthur</em></h1>
-      <p class="sub">Software engineering student who builds web apps, cloud services and data projects, and ships them with a team. Currently working on a logistics platform, Loadmaster.</p>
+      <p class="sub">Software engineering student and web developer who designs and ships real websites for real organisations, from school management systems to non-profit sites. Currently building the Loadmaster platform at work.</p>
       <div class="btns">
         <a class="btn primary" href="#projects">View projects</a>
         <a class="btn ghost" href="#contact">Get in touch</a>
@@ -178,8 +184,8 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
 
   <div class="stats">
     <div class="stat"><b>654</b><span>Contributions in the last year</span></div>
-    <div class="stat"><b>6</b><span>Projects shown below</span></div>
-    <div class="stat"><b>3</b><span>Team repositories</span></div>
+    <div class="stat"><b>7</b><span>Projects shown below</span></div>
+    <div class="stat"><b>2</b><span>Live websites delivered</span></div>
     <div class="stat"><b>35</b><span>Commits in October 2026</span></div>
   </div>
 
@@ -188,13 +194,13 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
     <div>
       <h2>About me</h2>
       <!-- EDIT: rewrite these two paragraphs in your own words -->
-      <p>I'm a <strong>software engineering student</strong> who likes turning an idea into something people can open in a browser. I work on both the frontend and the backend, and I enjoy the part of a team project where code gets reviewed and improved.</p>
-      <p>Beyond web apps, my coursework covers <strong>cloud computing, big data and emerging trends in software engineering</strong>, so I'm comfortable moving between building an interface and working with data.</p>
+      <p>I'm a <strong>software engineering student</strong> who turns ideas into products people actually use. I've designed and launched a <strong>school management system</strong> and a <strong>website for an international charity</strong>, and I work on both the frontend and the backend.</p>
+      <p>Beyond web apps, my coursework covers <strong>cloud computing, big data and emerging trends in software engineering</strong>, so I'm comfortable moving between building a clean interface and working with data. I learn fast, care about the details, and deliver work that real organisations rely on.</p>
     </div>
     <ul class="facts">
       <li><span>🎓</span><div>BSc Software Engineering<small>YOUR UNIVERSITY</small></div></li>
-      <li><span>🤝</span><div>Team projects in two organisations<small>Loadmaster and Gikal Web App</small></div></li>
-      <li><span>🔍</span><div>Code review and pull requests<small>Regular contributor on shared repos</small></div></li>
+      <li><span>🌍</span><div>Live websites delivered<small>Gikal School System and Raising Hope International Friends</small></div></li>
+      <li><span>💼</span><div>Working developer<small>Building Loadmaster, frontend and backend, in a professional team</small></div></li>
     </ul>
   </section>
 
@@ -212,34 +218,37 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
   <!-- PROJECTS -->
   <section id="projects">
     <h2>Featured projects</h2>
-    <p class="lead">Team and course projects. Descriptions are short on purpose; open the repo for the details.</p>
+    <p class="lead">Live websites I have delivered, my current work, and coursework.</p>
     <div class="projects">
 
       <article class="proj feat">
         <div>
-          <div class="tag">Team project · In progress</div>
+          <div class="tag">Current work</div>
           <h3>Loadmaster</h3>
-          <!-- EDIT: describe what Loadmaster does in your own words -->
-          <p>A full-stack web platform built with a team, split into a frontend and a backend repository. I work on features such as pickup and drop-off points, and take part in code review.</p>
+          <p>A full-stack web platform I build as part of my job, covering both frontend and backend. I develop features such as pickup and drop-off points, work closely with my team, and take part in code review to keep quality high.</p>
           <div class="stack"><span>Frontend</span><span>Backend</span><span>REST API</span></div>
-          <div class="links">
-            <a href="https://github.com/Graduate-Test-Organisation/Loadmaster_FE" target="_blank" rel="noopener">Frontend repo</a>
-            <a href="https://github.com/Graduate-Test-Organisation/Loadmaster_BE" target="_blank" rel="noopener">Backend repo</a>
-          </div>
         </div>
         <div class="meta">
-          Role: <b>Developer</b><br>
-          Commits: <b>24+</b><br>
-          Work: <b>Features, pull requests</b>
+          Role: <b>Software developer</b><br>
+          Work: <b>Frontend and backend</b><br>
+          Status: <b>Current job</b>
         </div>
       </article>
 
       <article class="proj big">
-        <div class="tag">Team project</div>
-        <h3>Gikal Web App</h3>
-        <p>A web application built for GIKAL Management as part of their development team.</p>
-        <div class="stack"><span>Web app</span><span>Team project</span></div>
-        <div class="links"><a href="https://github.com/GIKAL-MANAGEMENT/Gikal_Web_App" target="_blank" rel="noopener">View repo</a></div>
+        <div class="tag">Live website · School management</div>
+        <h3>Gikal School Management System</h3>
+        <p>A school management system I designed and built to help a school run its day-to-day work in one place. It is live and in use.</p>
+        <div class="stack"><span>Web app</span><span>Design</span><span>Development</span></div>
+        <div class="links"><a href="https://gikal.org" target="_blank" rel="noopener">Visit gikal.org</a></div>
+      </article>
+
+      <article class="proj big">
+        <div class="tag">Live website · Non-profit</div>
+        <h3>Raising Hope International Friends</h3>
+        <p>A website I designed for Raising Hope International Friends, an organisation that does community work, giving it a clear online home for its mission.</p>
+        <div class="stack"><span>Web design</span><span>Development</span></div>
+        <div class="links"><a href="https://raisinghopeinternational.org/" target="_blank" rel="noopener">Visit the website</a></div>
       </article>
 
       <article class="proj big">
@@ -250,23 +259,7 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
         <div class="links"><a href="https://github.com/Kabandaarthur/cloud_assigment" target="_blank" rel="noopener">View repo</a></div>
       </article>
 
-      <article class="proj">
-        <div class="tag">Course project</div>
-        <h3>BSE4104</h3>
-        <p>Coursework on emerging trends in software engineering.</p>
-        <div class="stack"><span>HTML</span></div>
-        <div class="links"><a href="https://github.com/Kabandaarthur/BSE4104" target="_blank" rel="noopener">View repo</a></div>
-      </article>
-
-      <article class="proj">
-        <div class="tag">Data</div>
-        <h3>Patents analysis</h3>
-        <p>A notebook exploring patent data with Python.</p>
-        <div class="stack"><span>Python</span><span>Jupyter</span></div>
-        <div class="links"><a href="https://github.com/Kabandaarthur/Patents" target="_blank" rel="noopener">View repo</a></div>
-      </article>
-
-      <article class="proj">
+      <article class="proj big">
         <div class="tag">Course project</div>
         <h3>Big data assignment</h3>
         <p>Coursework applying big data techniques to a dataset.</p>
@@ -274,8 +267,23 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
         <div class="links"><a href="https://github.com/Kabandaarthur/big_data_assignment" target="_blank" rel="noopener">View repo</a></div>
       </article>
 
-    </div>
-  </section>
+      <article class="proj big">
+        <div class="tag">Course project</div>
+        <h3>BSE4104</h3>
+        <p>Coursework on emerging trends in software engineering.</p>
+        <div class="stack"><span>HTML</span></div>
+        <div class="links"><a href="https://github.com/Kabandaarthur/BSE4104" target="_blank" rel="noopener">View repo</a></div>
+      </article>
+
+      <article class="proj big">
+        <div class="tag">Data</div>
+        <h3>Patents analysis</h3>
+        <p>A notebook exploring patent data with Python.</p>
+        <div class="stack"><span>Python</span><span>Jupyter</span></div>
+        <div class="links"><a href="https://github.com/Kabandaarthur/Patents" target="_blank" rel="noopener">View repo</a></div>
+      </article>
+
+    </section>
 
   <!-- JOURNEY -->
   <section id="journey">
@@ -285,12 +293,12 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
       <div class="tl-item">
         <time>2026 – Present</time>
         <h3>Developer, Loadmaster</h3>
-        <p>Building frontend and backend features with a team, opening pull requests and responding to review comments.</p>
+        <p>Building frontend and backend features for the Loadmaster platform, opening pull requests and responding to code review.</p>
       </div>
       <div class="tl-item">
         <time>2026</time>
-        <h3>Developer, Gikal Web App</h3>
-        <p>Contributing to a web application for GIKAL Management.</p>
+        <h3>Designer and developer, Gikal and Raising Hope</h3>
+        <p>Designed and launched a school management system (gikal.org) and a website for Raising Hope International Friends.</p>
       </div>
       <div class="tl-item">
         <time>YEAR – Present</time>
@@ -302,14 +310,25 @@ footer{padding:48px 0;text-align:center;color:var(--muted);font-size:.88rem}
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="contact">
-      <h2>Let's build something</h2>
-      <p>I'm open to internships, collaborations and junior developer roles. The fastest way to reach me is email.</p>
-      <div class="btns">
-        <a class="btn primary" href="mailto:YOUR_EMAIL">Email me</a>
-        <a class="btn ghost" href="https://github.com/Kabandaarthur" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+    <h2 style="text-align:center">Let's build something</h2>
+    <p class="lead" style="margin-inline:auto;text-align:center">Open to internships, collaborations and engineering opportunities.</p>
+    <div class="cards">
+      <a class="card" href="mailto:arthurvardy27@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <small>Email</small><span>arthurvardy27@gmail.com</span>
+      </a>
+      <a class="card" href="tel:+256706062559">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <small>Phone</small><span>0706062559</span>
+      </a>
+      <a class="card" href="https://www.linkedin.com/in/kabanda-arthur-a72016407" target="_blank" rel="noopener">
+        <b class="ico">in</b>
+        <small>LinkedIn</small><span>kabanda-arthur</span>
+      </a>
+      <a class="card" href="https://github.com/Kabandaarthur" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+        <small>GitHub</small><span>Kabandaarthur</span>
+      </a>
     </div>
   </section>
 
